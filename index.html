@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <input type="text" disabled id="display" value="0" />
+      </div>
+      <div class="botoes">
+        <div class="primeiro_andar">
+          <button class="botao funcoes individual" onclick="clean()">AC</button>
+          <button class="botao funcoes individual" onclick="back()">C</button>
+          <button class="botao funcoes individual" onclick="setOperator('%')">
+            %
+          </button>
+          <button class="botao funcoes" onclick="setOperator('/')">÷</button>
+        </div>
+
+        <div class="segundo_andar">
+          <button class="botao" onclick="insertToDisplay('7')">7</button>
+          <button class="botao" onclick="insertToDisplay('8')">8</button>
+          <button class="botao" onclick="insertToDisplay('9')">9</button>
+          <button class="botao funcoes" onclick="setOperator('x')">x</button>
+        </div>
+
+        <div class="terceiro_andar">
+          <button class="botao" onclick="insertToDisplay('4')">4</button>
+          <button class="botao" onclick="insertToDisplay('5')">5</button>
+          <button class="botao" onclick="insertToDisplay('6')">6</button>
+          <button class="botao funcoes" onclick="setOperator('-')">-</button>
+        </div>
+
+        <div class="quarto_andar">
+          <button class="botao" onclick="insertToDisplay('1')">1</button>
+          <button class="botao" onclick="insertToDisplay('2')">2</button>
+          <button class="botao" onclick="insertToDisplay('3')">3</button>
+          <button class="botao funcoes" onclick="setOperator('+')">+</button>
+        </div>
+
+        <div class="quinto_andar">
+          <button class="botao button_0" onclick="insertToDisplay('0')">
+            0
+          </button>
+          <button class="botao" onclick="insertToDisplay('.')">.</button>
+          <button class="botao funcoes" onclick="result()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
